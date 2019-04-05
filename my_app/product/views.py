@@ -29,6 +29,7 @@ class LocationView(MethodView):
         customer = (request.args.get('latitude'),
                     request.args.get('longitude'))
         locations = Location.query.all()
+        print(len(locations))
         res = {}
         for loc in locations:
             driver = (loc.lati, loc.longi)
